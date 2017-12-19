@@ -13,6 +13,11 @@ namespace VueMvc.Controllers
             return View();
         }
 
+        public ActionResult IndexVue()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
