@@ -8,10 +8,13 @@
 
 <h2>Todo by Knockout.js</h2>
 
-<div>
-    <ul data-bind="foreach: todoList">
-        <li>
-            <span data-bind="if: done">済:</span>
+<div id="todo-list">
+    <input type="text" data-bind="value: todoSummary, valueUpdate: 'afterkeydown'" placeholder="todoを入力" />
+    <button data-bind="click: addTodo">追加</button>
+
+    <ul class="list-group" data-bind="foreach: todoList">
+        <li class="list-group-item">
+            <input type="checkbox" data-bind="checked: done" />
             <span data-bind="text: summary"></span>
         </li>
     </ul>

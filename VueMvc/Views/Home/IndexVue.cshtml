@@ -10,10 +10,13 @@
 
 <h2>Todo by Vue.js</h2>
 
-<div>
-    <ul id="todo-list">
-        <li v-for="item in todoList">
-            <span v-if="item.done">済:</span>
+<div id="todo-list">
+    <input type="text" v-model="todoSummary" placeholder="todoを入力" />
+    <button v-on:click="addTodo">追加</button>
+
+    <ul class="list-group">
+        <li class="list-group-item" v-for="item in todoList">
+            <input type="checkbox" v-if="item.done" />
             <span>{{ item.summary }}</span>
         </li>
     </ul>
