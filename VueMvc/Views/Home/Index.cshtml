@@ -1,21 +1,21 @@
 ﻿@{
-    ViewBag.Title = "Todo";
+  ViewBag.Title = "Todo";
 }
 
 @section scripts{
-    <script src="~/Scripts/todo.ko.js" type="text/javascript"></script>
+  <script src="~/Scripts/todo.ko.js" type="text/javascript"></script>
 }
 
 <h2>Todo by Knockout.js</h2>
 
 <div id="todo-list">
-    <input type="text" data-bind="value: todoSummary, valueUpdate: 'afterkeydown'" placeholder="todoを入力" />
-    <button data-bind="click: addTodo">追加</button>
+  <input type="text" data-bind="value: todoSummary, valueUpdate: 'afterkeydown'" placeholder="todoを入力" />
+  <button data-bind="click: addTodo">追加</button>
 
-    <ul class="list-group" data-bind="foreach: todoList">
-        <li class="list-group-item">
-            <input type="checkbox" data-bind="checked: done" />
-            <span data-bind="text: summary"></span>
-        </li>
-    </ul>
+  <ul class="list-group" data-bind="foreach: todoList">
+    <li class="list-group-item">
+      <input type="checkbox" data-bind="checked: done" />
+      <span data-bind="text: summary, css: { 'text-success': done }"></span>
+    </li>
+  </ul>
 </div>

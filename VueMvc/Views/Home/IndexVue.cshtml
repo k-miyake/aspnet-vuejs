@@ -1,23 +1,23 @@
 ﻿
 @{
-    ViewBag.Title = "Todo";
-    Layout = "~/Views/Shared/_LayoutVue.cshtml";
+  ViewBag.Title = "Todo";
+  Layout = "~/Views/Shared/_LayoutVue.cshtml";
 }
 
 @section scripts{
-    <script src="~/Scripts/todo.vue.js" type="text/javascript"></script>
+  <script src="~/Scripts/todo.vue.js" type="text/javascript"></script>
 }
 
 <h2>Todo by Vue.js</h2>
 
 <div id="todo-list">
-    <input type="text" v-model="todoSummary" placeholder="todoを入力" />
-    <button v-on:click="addTodo">追加</button>
+  <input type="text" v-model="todoSummary" placeholder="todoを入力" />
+  <button v-on:click="addTodo">追加</button>
 
-    <ul class="list-group">
-        <li class="list-group-item" v-for="item in todoList">
-            <input type="checkbox" v-model="item.done" />
-            <span>{{ item.summary }}</span>
-        </li>
-    </ul>
+  <ul class="list-group">
+    <li class="list-group-item" v-for="item in todoList">
+      <input type="checkbox" v-model="item.done" />
+      <span v-bind:class="{ 'text-success': item.done}">{{ item.summary }}</span>
+    </li>
+  </ul>
 </div>
