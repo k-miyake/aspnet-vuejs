@@ -16,7 +16,7 @@
 
     <ul class="list-group">
         <li class="list-group-item" v-for="item in todoList">
-            <input type="checkbox" v-if="item.done" />
+            <input type="checkbox" v-model="item.done" />
             <span>{{ item.summary }}</span>
         </li>
     </ul>

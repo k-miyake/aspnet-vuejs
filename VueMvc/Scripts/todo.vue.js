@@ -5,7 +5,7 @@
         todoList: [
             {
                 summary: "1つ目のtodo",
-                done: false
+                done: true
             },
             {
                 summary: "2つ目のtodo",
